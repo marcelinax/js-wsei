@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #faf9f9;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.createNotesBox {
+  width: 30%;
+  background-color: #2f243a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.createNoteTitle {
+  flex-basis: 100%;
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+  color: #faf9f9;
+}
+.textBox {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.title,
+.content {
+  height: 60px;
+  width: 80%;
+  border-radius: 20px;
+  color: #0a0a0ab8;
+  font-size: 15px;
+  padding-left: 20px;
+}
+.title::placeholder,
+.content::placeholder {
+  color: #07070752;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+.content {
+  height: 200px;
+  padding-top: 20px;
+}
+h5 {
+  flex-basis: 100%;
+  margin-left: 70px;
+  font-size: 15px;
+  color: #faf9f9;
+  margin-top: 3em;
+}
+.coloursBox {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.oneColourBox {
+  border-radius: 50%;
+  height: 76px;
+  width: 76px;
+  margin: auto 20px;
+}
+.oneColourBox.selected {
+  box-shadow: 2px 2px 7px black;
+}
+.oneColourBox:hover,
+.addButton:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.purple,
+.default_purple--active {
+  background-color: #444054;
+}
+.grey,
+.grey--active {
+  background-color: #bebbbb;
+}
+.lightPink,
+.lightPink--active {
+  background-color: #fac9b8;
+  color: #fac9b8;
+}
+
+.darkOrange,
+.darkOrange--active {
+  background-color: #db8a74;
+}
+.addNoteButtonSection {
+  flex-basis: 100%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.addButton {
+  width: 80px;
+  height: 80px;
+  background-color: #faf9f9;
+  border-radius: 20px;
+  background-image: url(Image/plus.png);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.notesBox {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  flex-direction: column;
+  width: 70%;
+}
+.pinnedNotesBox,
+.otherNotesBox {
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.pinnedNotesBoxTitle,
+.otherNotesBoxTitle {
+  flex-basis: 100%;
+  margin: auto 150px;
+}
+h3 {
+  color: #2f243a;
+  font-size: 20px;
+  flex-basis: 100%;
+}
+
+.otherNote,
+.pinnedNote {
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 35px;
+}
+.singleNote_date {
+  font-size: 12px;
+  color: #faf9f9;
+  text-align: right;
+  padding: 1em 3em 1em 1em;
+}
+.singleNote_title {
+  font-size: 22px;
+  color: #faf9f9;
+  padding: 20px;
+}
+.singleNote_content {
+  font-size: 15px;
+  color: #faf9f9;
+  text-align: center;
+  padding: auto;
+}
+.singleNote_options {
+  display: flex;
+  flex-basis: 100%;
+  height: 100px;
+  justify-content: center;
+  margin: 20px auto;
+  padding-top: 2em;
+}
+.singleNote_options_editNote,
+.singleNote_options_pinNote,
+.singleNote_options_deleteNote {
+  width: 22px;
+  height: 22px;
+  background-position: center;
+  background-size: contain;
+  margin: auto 10px;
+}
+.singleNote_options_editNote {
+  background-image: url(Image/edit.png);
+}
+.singleNote_options_deleteNote {
+  background-image: url(Image/delete.png);
+}
+.singleNote_options_pinNote {
+  background-image: url(Image/pin.png);
+}
+.singleNote_options_editNote:hover,
+.singleNote_options_pinNote:hover,
+.singleNote_options_deleteNote:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 10px;
+  background-color: #4440547c;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #444054;
+  border-radius: 20px;
+}

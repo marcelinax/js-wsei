@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100vh;
+}
+.title_and_searching_bar_box {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  margin: 12em 0 auto 6em;
+  align-items: center;
+  justify-content: center;
+}
+.app_title {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #3c6e71;
+}
+.searching_bar {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  margin-top: 1.5em;
+}
+.searching_bar label {
+  margin-right: 2em;
+  font-size: 20px;
+  color: #3c6e71;
+}
+.search_town_box {
+  border-bottom: 2px solid #3c6e71;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 202px;
+  height: 30px;
+  background-color: transparent;
+  margin-right: 2.5em;
+  color: #3c6e71;
+  text-align: center;
+  outline: none;
+}
+.add_btn {
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #3c6e71;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+.main_weather_box {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  margin: 4em 0;
+  justify-content: center;
+}
+.weatherBox {
+  position: relative;
+  display: flex;
+  width: 258px;
+  height: 460px;
+  margin: 2em;
+  flex-direction: column;
+  box-shadow: 5px 5px 0 #a7bdbf;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+.weatherBox_delete {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.weatherBox_main-info {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  align-items: center;
+}
+.weatherBox p {
+  color: #3c6e71;
+  font-size: 12px;
+}
+.weatherBox_current_date p {
+  margin: 1em 0 0.5em 0;
+}
+.delete {
+  width: 15px;
+  height: 15px;
+}
+.weatherBox_city p {
+  margin: 1em 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.weatherBox_current_description {
+  margin-top: -0.8em;
+}
+.weatherBox_current_temp p {
+  font-size: 40px;
+  text-align: center;
+}
+.weatherBox_current_pressure {
+  margin-left: -5rem;
+}
+.weatherBox_current_humidity {
+  margin-right: -6rem;
+}
+.weatherBox_current_day p {
+  font-size: 15px;
+  font-weight: 500;
+}
+.weatherBox_current_day {
+  margin: 1.2em 0;
+}
+.weatherBox_bottom-info {
+  display: flex;
+  flex-basis: 100%;
+  height: 80px;
+  border-top: 1px solid #3c6e71;
+}
+.hourly_weatherBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hourly_weatherBox p {
+  color: #3c6e71;
+  font-size: 10px;
+}
+.hourly_weatherBox_description {
+  width: 30px;
+  height: 30px;
+}

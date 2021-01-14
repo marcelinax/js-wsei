@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #252422;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+}
+.drum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 60%;
+}
+.drum_parts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 305px;
+  width: 305px;
+  background: #eb5e28;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.3s all;
+}
+
+.drum_parts.active {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+.drum_parts img {
+  width: 150px;
+  pointer-events: none;
+}
+audio {
+  width: 0px;
+  height: 0px;
+}
+.recordingPanel {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 2em auto;
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
+}
+.chooseChannel {
+  display: flex;
+  align-items: center;
+}
+.recordingPanel p {
+  color: #fffcf2;
+  font-size: 24px;
+  margin-left: 3em;
+  margin-right: 2em;
+}
+
+.controlPanel {
+  flex-basis: 40%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.controlPanel p {
+  color: #fffcf2;
+  font-size: 24px;
+  font-weight: 900;
+}
+.btn {
+  padding: 1rem 4rem;
+  /* background-color: #CCC5B9; */
+  color: #ccc5b9;
+  font-size: 24px;
+  width: 259px;
+  height: 62px;
+  border: 3px solid #eb5e28;
+  border-radius: 10px;
+  margin: auto 5px;
+  background-color: transparent;
+  position: relative;
+  line-height: 10px;
+  padding-right: 86px;
+}
+.btn:hover {
+  transform: scale(0.9);
+}
+.channel {
+  margin-bottom: 2rem;
+}
+.recordingPanel button {
+  background-color: #eb5e28;
+  color: #fffcf2;
+  font-size: 24px;
+}
+.recordingPanel select {
+  width: 209px;
+  height: 50px;
+  font-size: 24px;
+  text-align-last: center;
+  background-color: #252422;
+  border: 3px solid #eb5e28;
+  border-radius: 10px;
+  color: #fffcf2;
+}
+.nameChannel {
+  padding: 0.5em 0;
+}
+.playIcon {
+  background-image: url(icons/play.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 18px;
+  right: 80px;
+}
+
+.deleteIcon {
+  background-image: url(icons/delete.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 18px;
+  right: 72px;
+}
+.smallerBtn {
+  width: 200px;
+  height: auto;
+  margin: auto 3em;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  color: #fffcf2;
+  border-radius: 10px;
+}
+.smallerBtn:hover,
+.biggerBtn:hover {
+  transform: scale(0.9);
+}
+#playBtn {
+  margin-right: -2em;
+}
+.biggerBtn {
+  width: 300px;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  color: #fffcf2;
+  border-radius: 10px;
+  padding: 0.8em 0;
+}
+.transformation {
+  transform: scale(0.9);
+}

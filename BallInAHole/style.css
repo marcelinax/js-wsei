@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #bfcde0; */
+    
+    height: 100vh;
+}
+canvas{
+    background: linear-gradient(#ffba08 8%,  #FFFFFF 100%);
+    border: 1px solid #03071e;
+
+}

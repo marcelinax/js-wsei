@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drumkit</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2847a477fd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"
+      media="all"
+      rel="stylesheet"
+    />
+    <script src="app.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <div class="recordingPanel">
+      <div class="chooseChannel">
+        <p>Choose a channel</p>
+        <select name="channels" id="channels">
+          <option value="0">Channel 1</option>
+          <option value="1">Channel 2</option>
+          <option value="2">Channel 3</option>
+          <option value="3">Channel 4</option>
+        </select>
+      </div>
+
+      <button class="biggerBtn" id="recordBtn">Start recording</button>
+      <button class="smallerBtn" id="playBtn">Play all</button>
+      <button class="smallerBtn" id="deleteBtn">Delete all</button>
+    </div>
+    <div class="container">
+      <div class="controlPanel">
+        <div class="channel" id="channel1">
+          <p class="nameChannel">Channel 1</p>
+          <div class="channelButtons">
+            <button class="play btn">
+              Play
+              <div class="playIcon"></div>
+            </button>
+            <button class="delete btn">
+              Delete
+              <div class="deleteIcon"></div>
+            </button>
+          </div>
+        </div>
+        <div class="channel" id="channel2">
+          <p class="nameChannel">Channel 2</p>
+          <div class="channelButtons">
+            <button class="play btn">
+              Play
+              <div class="playIcon"></div>
+            </button>
+            <button class="delete btn">
+              Delete
+              <div class="deleteIcon"></div>
+            </button>
+          </div>
+        </div>
+        <div class="channel" id="channel3">
+          <p class="nameChannel">Channel 3</p>
+          <div class="channelButtons">
+            <button class="play btn">
+              Play
+              <div class="playIcon"></div>
+            </button>
+            <button class="delete btn">
+              Delete
+              <div class="deleteIcon"></div>
+            </button>
+          </div>
+        </div>
+        <div class="channel" id="channel4">
+          <p class="nameChannel">Channel 4</p>
+          <div class="channelButtons">
+            <button class="play btn">
+              Play
+              <div class="playIcon"></div>
+            </button>
+            <button class="delete btn">
+              Delete
+              <div class="deleteIcon"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="drum">
+        <div class="drum_parts" id="clapPad" data-name="clap" data-key="KeyA">
+          <img src="icons/clap.png" alt="" />
+          <audio src="sounds/clap.wav" controls id="clap"></audio>
+        </div>
+        <div class="drum_parts" id="hihatPad" data-name="hihat" data-key="KeyS">
+          <img src="icons/closed-hihat.png" alt="" />
+          <audio src="sounds/hihat.wav" controls id="hihat"></audio>
+        </div>
+        <div class="drum_parts" id="crashPad" data-name="crash" data-key="KeyD">
+          <img src="icons/crash.png" alt="" />
+          <audio src="sounds/crash.wav" controls id="crash"></audio>
+        </div>
+        <div class="drum_parts" id="kickPad" data-name="kick" data-key="KeyF">
+          <img src="icons/kick.png" alt="" />
+          <audio src="sounds/kick.wav" controls id="kick"></audio>
+        </div>
+        <div
+          class="drum_parts"
+          id="openhatPad"
+          data-name="openhat"
+          data-key="KeyG"
+        >
+          <img src="icons/open-hihat.png" alt="" />
+          <audio src="sounds/openhat.wav" controls id="openhat"></audio>
+        </div>
+        <div class="drum_parts" id="snarePad" data-name="snare" data-key="KeyH">
+          <img src="icons/snare.png" alt="" />
+          <audio src="sounds/snare.wav" controls id="snare"></audio>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
