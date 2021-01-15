@@ -69,13 +69,13 @@ const getIcon = (value) => {
   return `http://openweathermap.org/img/wn/${value}@2x.png`;
 };
 
-const getCalculatedTime = (timezone, dt) => {
-  const date = new Date(dt + timezone * 1000);
+const getCalculatedTime = (timezone) => {
+  const date = new Date(Date.now() + timezone * 1000 - 3600000);
   const hours = date.getHours();
   const minutes = date.getMinutes().toString();
   return `${hours}:${minutes}`;
 };
-const getDayOfTheWeek = (a) => {
+const getDayOfTheWeek = () => {
   const date = new Date().getDay();
   switch (date) {
     case 0:
@@ -107,8 +107,7 @@ const createWeatherBox = (element) => {
     <img src = 'delete.png' class = 'delete' </img>
     </div>
     <div class = 'weatherBox_current_time'><p>${getCalculatedTime(
-      element[0].timezone,
-      element[1][0].dt
+      element[0].timezone
     )}</p></div>
     <div class = 'weatherBox_city'><p>${element[0].name}</p></div>
     <div class = 'weatherBox_main_current'>
@@ -144,7 +143,6 @@ const createWeatherBox = (element) => {
          element[1][0].main.temp - 273.15
        )}°C</p></div>
       </div>
-
       <div class = 'hourly_weatherBox'>
         <div class = 'hourly_weatherBox_time'><p>${new Date(
           element[1][1].dt * 1000 + element[0].timezone * 1000
@@ -159,7 +157,6 @@ const createWeatherBox = (element) => {
          element[1][1].main.temp - 273.15
        )}°C</p></div>
       </div>
-
       <div class = 'hourly_weatherBox'>
         <div class = 'hourly_weatherBox_time'><p>${new Date(
           element[1][2].dt * 1000 + element[0].timezone * 1000
@@ -174,7 +171,6 @@ const createWeatherBox = (element) => {
          element[1][2].main.temp - 273.15
        )}°C</p></div>
       </div>
-
        <div class = 'hourly_weatherBox'>
         <div class = 'hourly_weatherBox_time'><p>${new Date(
           element[1][3].dt * 1000 + element[0].timezone * 1000
