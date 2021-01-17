@@ -72,7 +72,8 @@ const getIcon = (value) => {
 const getCalculatedTime = (timezone) => {
   const date = new Date(Date.now() + timezone * 1000 - 3600000);
   const hours = date.getHours();
-  const minutes = date.getMinutes().toString();
+  const minutes =
+    date.getMinutes() > 10 ? date.getMinutes() : "0" + date.getMinutes();
   return `${hours}:${minutes}`;
 };
 const getDayOfTheWeek = () => {
