@@ -41,7 +41,7 @@ class SnowFlakes {
       let y = Math.random() * this.canvas.height;
       let velocity = {
         x: Math.random() * 0.1,
-        y: Math.random() +1,
+        y: Math.random() + 1,
       };
       const color = "#ffffff";
       this.snow.push(new SnowFlake(x, y, radius, velocity, color));
@@ -58,12 +58,13 @@ class SnowFlakes {
     for (let i = 0; i < this.snow.length; i++) {
       this.snow[i].drawFlake();
       this.snow[i].fall();
-
-      if(this.snow[i].y - this.snow[i].radius >= this.canvas.height ){
-         this.snow[i].y = 0 - this.snow[i].radius;
+      // jeżeli śnieg spadnie to wraca do góry
+      if (this.snow[i].y - this.snow[i].radius >= this.canvas.height) {
+        this.snow[i].y = 0 - this.snow[i].radius;
       }
-      if(this.snow[i].x + this.snow[i].radius <= 0 || this.snow[i].x - this.snow[i].radius >= this.canvas.width){
-        this.snow[i].velocity.x *= -2;
+      // jeżeli śnieg spadnie po prawej stronie ekranu to wraca na lewą
+      if (this.snow[i].x - this.snow[i].radius >= this.canvas.width) {
+        this.snow[i].x = 0 - this.snow[i].radius;
       }
     }
     window.requestAnimationFrame(() => {
