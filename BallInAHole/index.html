@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ball in the hole</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <canvas id="" width="375" height="812"> </canvas>
+      <div class="game-box">
+        <div class="time-box">
+          <p class="time">0:00</p>
+        </div>
+        <div class="button-box">
+          <button class="start-btn">START</button>
+          <button class="restart-btn">RESTART</button>
+        </div>
+        <div class="score-box">
+          <p class="score">2/5</p>
+        </div>
+      </div>
+      <canvas id="" width="375" height="812"> </canvas>
     </div>
- 
-    <script src="main.js"></script>
-   
-    
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>

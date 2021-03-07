@@ -1,21 +1,62 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
 }
-body{
-    box-sizing: border-box;
+body {
+  box-sizing: border-box;
 }
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #bfcde0; */
-    
-    height: 100vh;
-}
-canvas{
-    background: linear-gradient(#ffba08 8%,  #FFFFFF 100%);
-    border: 1px solid #03071e;
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #bfcde0; */
 
+  height: 100vh;
+}
+canvas {
+  background-color: #ffffff;
+  border: 2px solid #03071e;
+  box-shadow: 5px 5px 0 black;
+}
+
+.game-box {
+  width: 300px;
+  background-color: #ffffff;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+
+.time-box,
+.button-box,
+.score-box {
+  width: calc(100% - 1rem);
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  margin-bottom: 1rem;
+  box-shadow: 5px 5px 0 black;
+}
+
+.button-box {
+  display: flex;
+}
+
+.button-box > button {
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 0;
+}
+
+.time {
+  font-size: 3rem;
+}
+
+.score {
+  font-size: 3rem;
+}
+
+.restart-btn {
+  display: none;
 }
